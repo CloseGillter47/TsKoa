@@ -1,0 +1,46 @@
+{
+  "name": "ts-koa2",
+  "version": "0.1.0",
+  "author": "CloseGillter47 <CloseGillter47@gmail.com>",
+  "scripts": {
+    "gulp": "gulp",
+    "start": "node dist/bin/www",
+    "dev": "./node_modules/.bin/nodemon bin/www",
+    "prd": "pm2 start dist/bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "debug": "^2.6.3",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^3.2.0",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^2.0.1",
+    "koa-onerror": "^1.2.1",
+    "koa-router": "^7.1.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.2.1",
+    "pug": "^2.0.0-rc.1",
+    "typescript": "^2.7.1"
+  },
+  "devDependencies": {
+    "@types/del": "^3.0.0",
+    "@types/gulp": "^4.0.5",
+    "@types/gulp-mocha": "0.0.31",
+    "@types/koa": "^2.0.44",
+    "@types/koa-bodyparser": "^4.2.0",
+    "@types/koa-json": "^2.0.18",
+    "@types/koa-logger": "^3.1.0",
+    "@types/koa-router": "^7.0.27",
+    "@types/koa-views": "^2.0.3",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^5.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-typescript": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "nodemon": "^1.8.1",
+    "run-sequence": "^2.2.1",
+    "ts-node": "^4.1.0"
+  }
+}
