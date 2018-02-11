@@ -12,7 +12,7 @@ export class BaseRoute {
      * @class BaseRoute
      * @constructor
      */
-    constructor() {
+    constructor(app: Koa) {
 
     }
 

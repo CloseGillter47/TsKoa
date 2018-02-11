@@ -74,15 +74,17 @@ export class Server {
 
     public routes() {
 
-        let router = new Router();
+        // let router = new Router();
 
-        IndexRoute.create(router);
+        IndexRoute.create(this.app);
 
-        UserRoute.create(router);
+        UserRoute.create(this.app);
 
-        this.app.use(router.routes());
+        // console.dir(router);
 
-        this.app.use(router.allowedMethods());
+        // this.app.use(router.routes());
+
+        // this.app.use(router.allowedMethods());
     }
 
     public api() {
