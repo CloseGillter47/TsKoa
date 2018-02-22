@@ -4,9 +4,11 @@ import { BaseRoute } from "./route";
 
 export class IndexRoute extends BaseRoute {
 
-    public static create(router: Router) {
+    public static create() {
         //log
         console.log("[IndexRoute::create] Creating index route.");
+
+        let router = new Router();
 
         router.prefix('/index');
 
@@ -22,6 +24,8 @@ export class IndexRoute extends BaseRoute {
         router.get("/json", async (ctx: Context, next: Middleware) => {
             await new IndexRoute().json(ctx, next);
         });
+
+        return router;
     }
 
     constructor() {

@@ -4,9 +4,11 @@ import { BaseRoute } from "./route";
 
 export class UserRoute extends BaseRoute {
 
-    public static create(router: Router) {
+    public static create() {
         //log
         console.log("[UsersRoute::create] Creating users route.");
+
+        let router = new Router();
 
         router.prefix('/users');
 
@@ -22,6 +24,8 @@ export class UserRoute extends BaseRoute {
         router.get("/json", async (ctx: Context, next: Middleware) => {
             await new UserRoute().json(ctx, next);
         });
+
+        return router;
     }
 
     constructor() {

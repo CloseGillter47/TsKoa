@@ -76,16 +76,27 @@ export class Server {
 
         let router = new Router();
 
-        IndexRoute.create(router);
-
-        UserRoute.create(router);
+        router.get("/", async (ctx: Koa.Context, next: Koa.Middleware) => {
+            await ctx.render('index', {
+                title: 'Hello Koa 2! :)'
+            });
+        });
 
         this.app.use(router.routes());
-
-        this.app.use(router.allowedMethods());
     }
 
     public api() {
 
+        let indexRouter = IndexRoute.create();
+
+        let userRouter = UserRoute.create();
+
+        this.app.use(indexRouter.routes());
+
+        this.app.use(indexRouter.allowedMethods());
+
+        this.app.use(userRouter.routes());
+
+        this.app.use(userRouter.allowedMethods());
     }
 }
